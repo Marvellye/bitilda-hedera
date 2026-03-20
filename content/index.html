@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitilda | 20k+ Tokens. One Chat.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Space+Grotesk:wght@300;500;700&family=Outfit:wght@900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c4a96fddb0.js" crossorigin="anonymous"></script>
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6a44f1',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/bbh-hegarty');
+
+        :root {
+            --bg: #ffffff;
+            --text: #0a0a0a;
+            --card: #f9f9f9;
+            --border: rgba(0, 0, 0, 0.08);
+            --nav: rgba(255, 255, 255, 0.8);
+        }
+
+        .dark {
+            --bg: #000000;
+            --text: #ffffff;
+            --card: #0a0a0a;
+            --border: rgba(255, 255, 255, 0.08);
+            --nav: rgba(15, 15, 15, 0.7);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: background-color 0.4s ease, color 0.4s ease;
+            overflow-x: hidden;
+        }
+
+        .font-hegarty {
+            font-family: 'BBH Hegarty', 'Outfit', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+            line-height: 0.85;
+        }
+
+        .space-grotesk { font-family: 'Space Grotesk', sans-serif; }
+
+        .nav-pill {
+            background: var(--nav);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .orange-glow-text {
+            color: #6a44f1;
+            text-shadow: 0 0 30px rgba(106, 68, 241, 0.3);
+        }
+
+        .neo-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .neo-card:hover {
+            border-color: #6a44f1;
+            transform: translateY(-5px);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+        }
+
+        /* Marquee Animation */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 1rem;
+            animation: scroll 30s linear infinite;
+        }
+
+        @keyframes scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        .theme-toggle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .theme-toggle:hover { transform: scale(1.1); } 
+
+        [v-cloak] { display: none; }
+    </style>
+</head>
+<body class="dark:bg-black bg-white transition-colors duration-500">
+    <div id="app" v-cloak>
+
+        <!-- Nav -->
+        <nav class=" top-0 w-full z-[100] px-6 py-8">
+            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="/logo.svg" class="h-14 w-auto -mr-4 -mt-1" alt="Bitilda Logo" />
+                    <span class="font-hegarty text-3xl text-black dark:text-white">itilda</span>
+                </div>
+                <div class="hidden nav-pill px-12 py-2 flex items-center justify-between md:flex gap-8 font-bold text-[10px] uppercase tracking-[0.2em] text-black/40 dark:text-white/50">
+                    <a href="#assets" class="hover:text-primary transition-colors">20,000+ Assets</a>
+                    <a href="#safety" class="hover:text-primary transition-colors">AI Security</a>
+                    <a href="#how" class="hover:text-primary transition-colors">How it works</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/message/J6C7OQCWM74NH1" class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full font-black text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white transition-all">Launch</a>
+                    <!-- Theme Toggle Button -->
+                    <button @click="toggleTheme" class="theme-toggle text-black dark:text-white">
+                        <svg v-if="isDark" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.364l-.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="relative min-h-screen flex flex-col items-center justify-center pt-30 px-6">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(106,68,241,0.1)_0%,transparent_70%)] pointer-events-none"></div>
+            
+            <div class="max-w-6xl mx-auto text-center relative z-10">
+                <h1 class="font-hegarty text-[clamp(1.1rem,14vw,7rem)] leading-[0.8] mb-8 text-black dark:text-white">
+                    Trade </br><span class="orange-glow-text">Everything</span> <br> 
+                    <i class="fa-brands fa-whatsapp"></i>n WhatsApp.
+                </h1>
+                <p class="text-xl md:text-2xl text-black/60 dark:text-white/60 max-w-2xl mx-auto mb-12 space-grotesk">
+                    Buy, sell, and manage crypto easily on  <span class="text-primary font-bold">WhatsApp</span> with fast, secure cashouts.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://wa.me/message/J6C7OQCWM74NH1" class="bg-primary text-white px-10 py-5 rounded-2xl font-black uppercase tracking-tight text-lg shadow-xl shadow-primary/20 hover:scale-105 transition-transform">
+                        Start Chatting
+                    </a>
+                    <div class="text-left px-6 py-3 rounded-2xl border border-black/10 dark:border-white/10 glass">
+                        <div class="text-[10px] uppercase text-black/40 dark:text-white/40 tracking-widest">Buy Crypto With</div>
+                        <div class="font-bold text-black dark:text-white">Naira (NGN) <span class="text-primary">→</span> USDT</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Phone Mockup --> 
+            <img src="/img" class="w-full h-full object-cover  relative w-full max-w-[380px] aspect-[9/18.5] " alt="Bitilda WhatsApp Wallet Mockup" />
+        </section>
+
+        <!-- Marquee -->
+        <div id="assets" class="py-20 border-y border-black/5 dark:border-white/5 bg-gray-50 dark:bg-zinc-950/50">
+            <div class="max-w-7xl mx-auto px-6 mb-10">
+                <h2 class="font-hegarty text-4xl text-black dark:text-white">We support <span class="text-primary">20,000+</span> assets</h2>
+                <p class="text-black/40 dark:text-white/40 uppercase tracking-widest text-[10px] font-bold mt-2">The entire market in one contact.</p>
+            </div>
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <div v-for="token in tokenList" class="flex items-center gap-4 px-12 py-4 bg-white dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5 shadow-sm">
+                        <img :src="token.img" class="w-8 h-8 rounded-full grayscale hover:grayscale-0 transition-all" />
+                        <span class="font-bold space-grotesk text-black dark:text-white">{{token.name}}</span>
+                    </div>
+                </div>
+                <div class="marquee-content">
+                    <div v-for="token in tokenList" class="flex items-center gap-4 px-12 py-4 bg-white dark:bg-white/5 rounded-2xl border border-black/5 dark:border-white/5 shadow-sm">
+                        <img :src="token.img" class="w-8 h-8 rounded-full grayscale hover:grayscale-0 transition-all" />
+                        <span class="font-bold space-grotesk text-black dark:text-white">{{token.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparison -->
+        <section class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-20 items-center">
+                    <div>
+                        <h2 class="font-hegarty text-6xl mb-8 text-black dark:text-white">Why Bitilda <br>Wins.</h2>
+                        <div class="space-y-6">
+                            <div class="p-8 neo-card flex gap-6 items-start">
+                                <div class="text-4xl">🛡️</div>
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-2 text-black dark:text-white">Isolated AI Custody</h3>
+                                    <p class="text-black/50 dark:text-white/50">Your wallet lives in a secure, isolated AI sandbox that only your WhatsApp session can unlock. Institutional security, chat simplicity.</p>
+                                </div>
+                            </div>
+                            <div class="p-8 neo-card flex gap-6 items-start">
+                                <div class="text-4xl">🚀</div>
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-2 text-black dark:text-white">Infinite Liquidity</h3>
+                                    <p class="text-black/50 dark:text-white/50">Bitilda aggregates liquidity from Uniswap, Curve, and 10+ others to get you the lowest fees and best slippage.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-primary rounded-[3rem] p-12 text-white dark:text-black">
+                        <h3 class="font-hegarty text-4xl mb-6">VS The Competition</h3>
+                        <div class="space-y-4 font-bold uppercase tracking-tighter text-xl">
+                            <div class="flex justify-between border-b border-white/20 dark:border-black/10 pb-4">
+                                <span>Token Support</span>
+                                <span>20,000+</span>
+                            </div>
+                            <div class="flex justify-between border-b border-white/20 dark:border-black/10 pb-4 opacity-60">
+                                <span>Others</span>
+                                <span>~50 Assets</span>
+                            </div>
+                            <div class="flex justify-between border-b border-white/20 dark:border-black/10 pb-4">
+                                <span>Security</span>
+                                <span>MPC + AI Sandbox</span>
+                            </div>
+                            <div class="flex justify-between pb-4">
+                                <span>Wallet Access</span>
+                                <span>Instant AI Deployment</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-32 bg-gray-50 dark:bg-white/[0.02]">
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="font-hegarty text-5xl text-center mb-20 text-black dark:text-white">The Word on <br>the Street.</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div v-for="tweet in tweets" class="bg-white dark:bg-black border border-black/5 dark:border-white/10 p-6 rounded-3xl shadow-sm">
+                        <div class="flex justify-between mb-4">
+                            <div class="flex gap-3">
+                                <img :src="tweet.avatar" class="w-10 h-10 rounded-full" />
+                                <div>
+                                    <div class="font-bold text-sm text-black dark:text-white">{{tweet.name}}</div>
+                                    <div class="text-black/40 dark:text-white/40 text-xs">{{tweet.handle}}</div>
+                                </div>
+                            </div>
+                            <svg class="w-5 h-5 text-black/20 dark:text-white/20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </div>
+                        <p class="text-sm text-black/80 dark:text-white/80 leading-relaxed">{{tweet.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-32 px-6 max-w-4xl mx-auto">
+            <h2 class="font-hegarty text-5xl text-center mb-16 text-black dark:text-white">Questions.</h2>
+            <div class="space-y-4">
+                <div v-for="(f, i) in faqs" class="neo-card p-6 cursor-pointer" @click="activeFaq = activeFaq === i ? null : i">
+                    <div class="flex justify-between items-center">
+                        <h4 class="font-bold uppercase tracking-widest text-xs text-black dark:text-white">{{f.q}}</h4>
+                        <span class="text-primary text-2xl">{{activeFaq === i ? '−' : '+'}}</span>
+                    </div>
+                    <p v-if="activeFaq === i" class="mt-4 text-black/50 dark:text-white/50 text-sm leading-relaxed">{{f.a}}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="py-40 px-6 text-center">
+            <div class="max-w-4xl mx-auto bg-primary p-1 rounded-[4rem]">
+                <div class="bg-white dark:bg-black rounded-[3.8rem] p-16 md:p-24 overflow-hidden relative">
+                    <h2 class="font-hegarty text-3xl md:text-7xl mb-10 relative z-10 text-black dark:text-white">Stop Waiting. <br> Start <span class="text-primary">Trading.</span></h2>
+                    <a href="https://wa.me/message/J6C7OQCWM74NH1" class="inline-block bg-primary text-white px-12 py-4 rounded-2xl font-black text-xl uppercase tracking-tighter relative z-10 shadow-xl shadow-primary/30">
+                        Get My Wallet Address
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 px-6 border-t border-black/5 dark:border-white/5">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center opacity-40 font-bold text-[10px] uppercase tracking-[0.3em] text-black dark:text-white">
+                <div>© 2026 Bitilda Labs Inc.</div>
+                <div class="flex gap-8 mt-6 md:mt-0">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const { createApp, ref, onMounted } = Vue;
+
+        createApp({
+            setup() {
+                const activeFaq = ref(0);
+                const isDark = ref(true);
+
+                const toggleTheme = () => {
+                    isDark.value = !isDark.value;
+                    if (isDark.value) {
+                        document.documentElement.classList.add('dark');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        localStorage.setItem('theme', 'light');
+                    }
+                };
+
+                const tokenList = [
+                    { name: 'Avalanche', img: 'https://cryptologos.cc/logos/avalanche-avax-logo.png?v=040' },
+                    { name: 'Ethereum', img: 'https://cryptologos.cc/logos/ethereum-eth-logo.png?v=040' },
+                    { name: 'Binance', img: 'https://cryptologos.cc/logos/bnb-bnb-logo.png?v=040' },
+                    { name: 'Polygon', img: 'https://cryptologos.cc/logos/polygon-matic-logo.png?v=040' },
+                    { name: 'Mantle', img: 'https://cryptologos.cc/logos/mantle-mnt-logo.png?v=040' },
+                    { name: 'Cronos', img: 'https://cryptologos.cc/logos/cronos-cro-logo.png?v=040' },
+                    { name: 'USDC', img: 'https://cryptologos.cc/logos/usd-coin-usdc-logo.png?v=040' },
+                    { name: 'USDT', img: 'https://cryptologos.cc/logos/tether-usdt-logo.png?v=040' },
+                ];
+
+                const tweets = [
+                    { name: "CryptoWhale", handle: "@whale_alert", avatar: "https://i.pravatar.cc/100?img=1", content: "Finally a WhatsApp wallet that doesn't just support 5 coins. Swapping obscure alts on Bitilda is scary fast. 10/10." },
+                    { name: "Sarah J.", handle: "@defi_sarah", avatar: "https://i.pravatar.cc/100?img=5", content: "The isolated AI sandbox gives me so much peace of mind. Institutional security but feels like I'm just texting a friend." },
+                    { name: "AlphaSeeker", handle: "@alpha_trades", avatar: "https://i.pravatar.cc/100?img=8", content: "Goodbye CEXs. Bitilda is all I need. The liquidity aggregation is insane—cheaper than swapping on Uniswap directly." }
+                ];
+
+                const faqs = [
+                    { q: "Is my money safe?", a: "Yes. Bitilda uses Multi-Party Computation (MPC) and an isolated AI Sandbox. Your private keys are never stored on a single server and are never accessible to our staff." },
+                    { q: "Which tokens are supported?", a: "Virtually everything. If it has liquidity on a major DEX (Ethereum, Solana, Polygon, Base), Bitilda can trade it. That's over 20,000+ assets." },
+                    { q: "How do I withdraw?", a: "Just text 'Withdraw' to the bot. You can send your assets to any external wallet or off-ramp to local currency instantly." },
+                    { q: "Are there fees?", a: "We aggregate the best rates across 40+ pools. We charge a tiny 0.1% convenience fee to keep the AI agents running 24/7." }
+                ];
+
+                onMounted(() => {
+                    // Check local storage for theme
+                    const savedTheme = localStorage.getItem('theme');
+                    if (savedTheme === 'light') {
+                        isDark.value = false;
+                        document.documentElement.classList.remove('dark');
+                    } else {
+                        isDark.value = true;
+                        document.documentElement.classList.add('dark');
+                    }
+
+                    gsap.registerPlugin(ScrollTrigger);
+                });
+
+                return { tokenList, tweets, faqs, activeFaq, isDark, toggleTheme };
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
