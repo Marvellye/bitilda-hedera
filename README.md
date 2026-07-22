@@ -1,265 +1,239 @@
 # <p align="center">🌍 Bitilda</p>
 
 <p align="center">
-  <b>AI-Powered Cross-Border Payment Infrastructure Built on Hedera</b><br>
-  <i>Making global money movement as simple as sending a message.</i>
+  <strong>Global Payments Infrastructure Built on Hedera</strong><br>
+  <em>Borderless payments, programmable wallets, AI-powered finance, and modern payment infrastructure for the next generation of global commerce.</em>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Hedera-Thrive%20Grant-8259EF?style=flat-square" />
-  <img src="https://img.shields.io/badge/Status-Production%20Development-success?style=flat-square" />
-  <img src="https://img.shields.io/badge/Infrastructure-Cross--Border-blue?style=flat-square" />
-  <img src="https://img.shields.io/badge/AI-Agentic-orange?style=flat-square" />
-  <img src="https://img.shields.io/badge/Security-Enterprise-red?style=flat-square" />
-</p>
-
-<p align="center">
-
-**One API. One Wallet. One AI. Every Border.**
-
+  <img src="https://img.shields.io/badge/Hedera-Native-8259EF?style=flat-square" alt="Hedera Native">
+  <img src="https://img.shields.io/badge/Global-Payments-success?style=flat-square" alt="Global Payments">
+  <img src="https://img.shields.io/badge/AI-Integrated-orange?style=flat-square" alt="AI">
+  <img src="https://img.shields.io/badge/API-First-blue?style=flat-square" alt="API First">
+  <img src="https://img.shields.io/badge/Enterprise-Ready-red?style=flat-square" alt="Enterprise">
 </p>
 
 ---
 
-# The Problem
+# The Future of Global Payments
 
-Cross-border payments remain slow, fragmented, and expensive.
+Bitilda is building the next generation of cross-border payment infrastructure on Hedera.
 
-Businesses, freelancers, creators, families, and financial institutions still rely on multiple providers to move money internationally. They must navigate:
+Just as Cash App transformed domestic money movement, Bitilda is reimagining international payments by combining stablecoins, programmable wallets, AI, and Hedera's high-performance network into a single financial platform.
 
-- High transaction fees
-- Multiple banking intermediaries
-- Delayed settlements
-- Currency restrictions
-- Complex blockchain wallets
-- Poor developer infrastructure
-- Limited access in emerging markets
-
-Stablecoins solve part of the problem.
-
-They don't solve usability.
+Whether you're an individual sending money to family, a freelancer receiving international payments, a business paying suppliers, or a developer embedding global payments into your application, Bitilda provides the infrastructure to move value across borders—instantly, securely, and affordably.
 
 ---
 
-# The Opportunity
+# Why Bitilda?
 
-Over **$190+ trillion** moves through global payment rails every year.
+International payments remain unnecessarily complex.
 
-Stablecoins are rapidly becoming the preferred settlement layer, yet the infrastructure required to connect traditional businesses, messaging platforms, AI, and blockchain remains fragmented.
+Users often face:
 
-Bitilda bridges that gap.
+- Slow bank transfers
+- High remittance fees
+- Multiple intermediaries
+- Currency conversion challenges
+- Fragmented financial platforms
+- Complex crypto wallets
+- Poor developer tools
 
-We are building the infrastructure layer that allows people and businesses to move value globally through conversational AI and programmable payment rails powered by Hedera.
-
----
-
-# Introducing Bitilda
-
-Bitilda is an AI-native cross-border payment infrastructure built on Hedera.
-
-Instead of asking users to understand wallets, gas fees, addresses, bridges, exchanges, and blockchain terminology...
-
-Bitilda lets them simply say:
-
-> "Pay David $250 in Kenya."
-
-or
-
-> "Convert 500 USDC to NGN."
-
-or
-
-> "Pay my suppliers every Friday."
-
-The AI understands intent.
-
-Bitilda handles everything else.
+Bitilda removes these barriers by providing a unified platform where sending money globally is as easy as sending money locally.
 
 ---
 
-# Vision
+# More Than a Wallet
 
-> **Become the operating system for AI-powered global payments.**
+Bitilda isn't just another crypto wallet.
 
-We're building the financial infrastructure where AI agents can securely own wallets, move money, automate settlements, and interact with financial services on behalf of users.
+It is a programmable financial platform built for modern global commerce.
 
-Humans won't open banking apps.
+Our platform combines:
 
-They'll simply ask AI.
+- 🌍 Cross-border payments
+- 💵 Multi-currency wallets
+- 🏦 Treasury management
+- 🤖 AI-powered financial automation
+- 💳 Merchant payments
+- 🔌 Developer APIs
+- 📱 Consumer payment application
+
+Everything runs on Hedera's secure, scalable, and low-cost network.
 
 ---
 
-# Core Infrastructure
+# Built for Everyone
 
-## 🌍 Cross-Border Payments
+## 👤 Individuals
 
-Move value across countries using Hedera as the settlement layer.
+A modern payment experience designed for a global world.
 
-- Near instant settlement
-- Extremely low transaction fees
-- Stablecoin support
-- Multi-currency payouts
-- Treasury management
+- Send money internationally
+- Receive payments from anywhere
+- Hold digital dollars and supported assets
+- Convert between currencies
+- Track balances and transactions
+- AI-powered financial assistant
+
+---
+
+## 🏢 Businesses
+
+Manage international finance without traditional banking complexity.
+
+- Supplier payments
+- Contractor payroll
 - Merchant settlements
+- International invoicing
+- Treasury management
+- Cross-border collections
 
 ---
 
-## 🤖 AI Financial Agent
+## 👨‍💻 Developers
 
-Every user receives an intelligent financial assistant capable of:
+Embed global payment capabilities directly into your applications.
 
-- Sending money
-- Receiving payments
-- Currency conversion
-- Wallet management
-- Transaction explanations
-- Spending insights
-- Portfolio monitoring
-- Payment scheduling
+Available infrastructure includes:
+
+- Wallet APIs
+- Payment APIs
+- Stablecoin settlement
+- Merchant APIs
+- Webhooks
+- SDKs
+- AI integrations
+
+---
+
+# AI Built Into Every Wallet
+
+Every Bitilda account includes an intelligent financial assistant.
+
+Simply ask:
+
+> Pay David $150.
+
+> Convert 500 USDC to NGN.
+
+> What's my account balance?
+
+> Schedule payroll every Friday.
+
+> Show my transactions this month.
+
+Bitilda understands natural language and securely executes financial actions on your behalf.
 
 No blockchain knowledge required.
 
 ---
 
-## 💼 Wallet Infrastructure
+# Core Platform
 
-Bitilda abstracts blockchain complexity.
+## 🌍 Global Payments
+
+Move money across borders quickly using Hedera as the settlement layer.
+
+- Near-instant settlement
+- Low transaction fees
+- Secure transfers
+- Global accessibility
+
+---
+
+## 💳 Multi-Currency Wallet
+
+Manage digital assets through a single wallet.
 
 Features include:
 
-- Non-custodial & managed wallets
-- Enterprise treasury wallets
-- Multi-chain asset support
-- Secure MPC-ready architecture
-- Hardware security integrations
-- Wallet recovery mechanisms
+- Receive payments
+- Send funds
+- Store assets
+- Portfolio overview
+- Transaction history
 
 ---
 
-## 🔗 Payment APIs
+## 🏦 Treasury
 
-Developers can integrate global payments in minutes.
+Built for startups, creators, and global businesses.
 
-Examples:
+- Treasury accounts
+- Automated settlements
+- Liquidity management
+- Financial reporting
+
+---
+
+## 💼 Merchant Payments
+
+Accept payments from customers around the world.
+
+- Payment requests
+- Merchant settlement
+- Invoice support
+- Business dashboard
+
+---
+
+## 🤖 AI Finance
+
+Your intelligent financial co-pilot.
+
+Capabilities include:
+
+- Financial insights
+- Spending analysis
+- Payment automation
+- Smart reminders
+- Natural language transactions
+
+---
+
+## 🔌 Payment Infrastructure
+
+Power your own fintech products with Bitilda APIs.
+
+Developers can integrate:
 
 - Wallet creation
-- International transfers
+- Global transfers
 - Merchant payouts
-- Stablecoin settlement
-- Payment links
-- Escrow
-- AI-powered payment workflows
+- Treasury management
+- Stablecoin payments
+- AI workflows
 
 ---
 
-## 🏦 Fiat On & Off Ramps
+# Access Anywhere
 
-Users can seamlessly move between local currency and digital assets.
+Bitilda is available across multiple interfaces.
 
-Examples:
+- 📱 Mobile App
+- 🌐 Web Platform
+- 💬 WhatsApp
+- ✈️ Telegram
+- 🔌 API
 
-- Bank → Stablecoin
-- Stablecoin → Bank
-- Merchant Settlement
-- Payroll
-- International Remittance
-
----
-
-## 💳 Merchant Infrastructure
-
-Businesses can:
-
-- Accept global payments
-- Receive stablecoins
-- Settle in local currency
-- Automate payroll
-- Invoice internationally
-- Manage treasury
+Messaging is one way to access Bitilda—not the product itself.
 
 ---
 
-## 🧠 Agentic Finance
+# Why Hedera?
 
-Bitilda isn't just another wallet.
+Bitilda is built on Hedera because it provides the performance required for modern financial infrastructure.
 
-It is infrastructure for autonomous AI agents.
+Benefits include:
 
-Examples:
+- Fast transaction finality
+- Predictable low fees
+- Enterprise-grade governance
+- High throughput
+- Sustainable, carbon-negative network
 
-- AI employee paying suppliers
-- AI treasury management
-- Automated payroll
-- Smart invoice settlement
-- Recurring subscriptions
-- AI accounting assistants
-
----
-
-# Why Hedera
-
-Hedera provides the ideal settlement layer for institutional-grade payment infrastructure.
-
-✅ Predictable low fees
-
-✅ Enterprise governance
-
-✅ Fast finality
-
-✅ High throughput
-
-✅ Carbon negative network
-
-✅ Trusted by global enterprises
-
-Bitilda leverages Hedera to make global payments reliable enough for banks while remaining simple enough for everyday users.
-
----
-
-# Product Ecosystem
-
-```
-                +----------------+
-                |   AI Assistant |
-                +-------+--------+
-                        |
-        +---------------+---------------+
-        |                               |
-+-------v--------+             +--------v--------+
-| Messaging Apps |             | Mobile App      |
-| WhatsApp       |             | iOS / Android   |
-| Telegram       |             | Web             |
-+-------+--------+             +--------+--------+
-        |                               |
-        +---------------+---------------+
-                        |
-              +---------v---------+
-              | Bitilda Platform  |
-              +---------+---------+
-                        |
-        +---------------+---------------+
-        |                               |
-+-------v--------+             +--------v--------+
-| Hedera Network |             | Banking Partners|
-+----------------+             +-----------------+
-```
-
----
-
-# Key Capabilities
-
-| Infrastructure | Description |
-|---------------|-------------|
-| 🌍 Cross-border Transfers | Move funds globally using Hedera settlement |
-| 💸 Stablecoin Payments | Fast international payments |
-| 🤖 AI Payment Agent | Natural language financial assistant |
-| 🏦 Treasury Management | Enterprise treasury operations |
-| 📦 Payment APIs | Infrastructure for developers |
-| 🔐 Wallet-as-a-Service | Embedded wallet infrastructure |
-| 💼 Merchant Payments | Global merchant settlement |
-| 🔄 Currency Conversion | Fiat and stablecoin interoperability |
-| 📊 Analytics | Transaction intelligence |
-| 🧠 AI Automation | Autonomous payment workflows |
+These advantages enable Bitilda to deliver a seamless payment experience while maintaining security and scalability.
 
 ---
 
@@ -274,49 +248,41 @@ Bitilda leverages Hedera to make global payments reliable enough for banks while
 - Redis
 - BullMQ
 
----
-
 ## AI
 
 - OpenAI
-- Gemini
+- Google Gemini
 - NVIDIA Inference
-- Agentic Workflow Engine
-
----
 
 ## Blockchain
 
 - Hedera SDK
-- Hedera Consensus Service
-- Hedera Token Service
-- Smart Contracts
-
----
+- Hedera Token Service (HTS)
+- Hedera Consensus Service (HCS)
+- Hedera Smart Contracts
 
 ## Infrastructure
 
 - Docker
 - Kubernetes
-- Cloudflare
 - GitHub Actions
+- Cloudflare
 
 ---
 
 # Security
 
-Security is foundational.
+Security is foundational to Bitilda.
 
-Bitilda employs enterprise-grade architecture including:
+Our platform includes:
 
 - AES-256-GCM encryption
-- End-to-end encrypted wallets
-- Hardware security compatibility
-- Role-based access control
+- Secure wallet architecture
+- End-to-end encrypted sensitive data
 - Audit logging
+- Role-based access control
 - Transaction monitoring
-- MPC-ready key architecture
-- Secure signing environment
+- Enterprise-grade security practices
 
 ---
 
@@ -324,76 +290,46 @@ Bitilda employs enterprise-grade architecture including:
 
 ## Phase 1
 
-- AI Wallet Infrastructure
-- Stablecoin Transfers
-- WhatsApp Payments
-- Telegram Integration
-
----
+- Consumer payment application
+- Global wallet infrastructure
+- Stablecoin payments
+- AI financial assistant
 
 ## Phase 2
 
-- Merchant APIs
-- Payment Links
-- Fiat On/Off Ramp Expansion
-- Multi-country Payouts
-
----
+- Merchant platform
+- Cross-border business payments
+- Treasury management
+- Developer APIs
 
 ## Phase 3
 
-- AI Autonomous Payments
-- Enterprise Treasury
-- Payroll Infrastructure
-- Escrow Services
-
----
+- Embedded finance
+- Enterprise payment infrastructure
+- AI-powered financial workflows
+- Banking integrations
 
 ## Phase 4
 
-- Embedded Finance SDK
-- Banking Integrations
-- Global Compliance Layer
-- Institutional APIs
-
----
-
-# Hedera Thrive Grant
-
-The Hedera Thrive Grant will accelerate Bitilda's transition from an AI wallet into production-grade payment infrastructure.
-
-Funding will be allocated towards:
-
-- Core infrastructure engineering
-- Hedera-native payment rails
-- Stablecoin settlement
-- AI financial agent development
-- Merchant APIs
+- Institutional treasury
+- Multi-region settlement
 - Compliance infrastructure
-- Security audits
-- Developer platform
-- Pilot deployments across African and international markets
+- Global payment network
 
 ---
 
-# Why Bitilda Matters
+# Vision
 
-The future of payments won't begin with banks.
+> **To become the global financial operating system for borderless payments.**
 
-It will begin with AI.
+We believe moving money internationally should be as simple as sending a message.
 
-As autonomous agents become responsible for commerce, payroll, treasury, subscriptions, and international trade, they need programmable financial infrastructure—not traditional banking interfaces.
-
-Bitilda is building that infrastructure on Hedera.
-
-By combining conversational AI, programmable wallets, stablecoin settlement, and enterprise-grade payment rails, Bitilda transforms global finance into a seamless, borderless experience that developers can build on, businesses can trust, and everyday users can understand.
+By combining Hedera's distributed ledger technology with intuitive financial products and AI-powered experiences, Bitilda is building the infrastructure that enables anyone—individuals, businesses, developers, and autonomous AI agents—to participate in the global economy without friction.
 
 ---
 
 <p align="center">
-
-### **Built for the future of AI-native global commerce.**
-
-**Powered by Hedera. Designed for the World.**
-
+  <strong>🌍 Borderless by Design.</strong><br>
+  <strong>⚡ Powered by Hedera.</strong><br>
+  <strong>🚀 Built for the Future of Global Commerce.</strong>
 </p>
